@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -66,6 +67,7 @@ namespace practicaSobrecargaMetodos
             {
                 MessageBox.Show("ERROR");
             }
+            MessageBox.Show("uwu");
             sw.Close();
         }
 

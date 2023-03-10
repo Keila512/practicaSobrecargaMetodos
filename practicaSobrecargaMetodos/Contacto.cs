@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace practicaSobrecargaMetodos
 {
@@ -27,6 +29,7 @@ namespace practicaSobrecargaMetodos
             set { correo = value; }
         }
 
+        // CONSTRUCTORS
         public Contacto() : base()
         {
             telefono = string.Empty;
@@ -37,6 +40,13 @@ namespace practicaSobrecargaMetodos
             this.telefono = telefono;
             this.correo = correo;
         }
+
+        ~Contacto()
+        {
+            MessageBox.Show("destructr called");
+            // DESTRUCTOR 
+        }
+
         public override string ToString()
         {
             return base.ToString() + " " + telefono + " " + correo;
